@@ -1,55 +1,169 @@
-<!-- <p>dashboard works!</p> -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" class="logo" href="#">LOGO ICON</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!-- card-section -->
+<div class="container">
+  <section class="cardSection">
+    <h4 class="main-heading">user overview</h4>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let card of array">
+        <div class="card cardClass">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-5 Cardname">
+                <p>{{ card.name }}</p>
+              </div>
+              <div class="col-sm-5 parentDiv">
+                <div class="percentageBox">
+                  <p>{{ card.percentages }}</p>
+                </div>
+              </div>
+            </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" rounterLink="/dashboard" class="navbar1"
-          >Dashboard</a
-        >
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          class="navbar1"
-        >
-          user
-        </a>
-        <div
-          appUserDropdown
-          class="dropdown-menu"
-          aria-labelledby="navbarDropdown"
-        >
-          <a class="dropdown-item" routerLink="/">User Table</a>
-          <a class="dropdown-item" routerLink="/">Create User</a>
-          <div class="dropdown-divider"></div>
+            <div class="progressBar">
+              <span><i class="fa-solid fa-circle"></i></span>
+              <span class="inProgress">In Progress</span>
+            </div>
+
+            <div class="progress pBar">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 34%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                34%
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/chart" class="navbar1">Chart</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" class="navbar1"
-          ><img src="assets\Vector.png" title="vector" alt="vector"
-        /></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      </div>
+    </div>
+  </section>
+  <!-- loan-section -->
+  <section class="loan-section">
+    <h4 class="loan">loan</h4>
+    <div class="loanContainer">
+      <div class="row vectorImg">
+        <div class="col-md-4 col-sm-12 laon-row">
+          <div class="laonImg img-fluid">
+            <div class="loanvector">
+              <img src="assets\Vector (1).png" />
+            </div>
+            <figure class="loanImg2">
+              <img src="assets\coin.png" />
+              <figcaption class="figSection">
+                <h4>SME Loans</h4>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 laon-row">
+          <div class="laonImg img-fluid">
+            <!-- <img src="" /> -->
+            <figure class="loanImg2">
+              <img src="assets\receipt-minus.png" />
+              <figcaption class="figSection">
+                <h4>Local Purchase Order</h4>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div>
+            <img src="assets\Vector (2).png" class="vector-invoice" />
+            <figure class="loanImg2">
+              <img src="assets\archive-book.png" />
+              <figcaption class="figSection">
+                <img src="" />
+                <h4>Invoice</h4>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 3rd-section -->
+  <section class="third-Section">
+    <div class="row">
+      <div class="col-sm-3 colorCard">
+        <img src="assets\Frame 1171275381.png" alt="card" title="card" />
+      </div>
+      <div class="col-sm-9">
+        <div class="firstsec">
+          <h3>Lorem Ipsum dolor</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            consequatur, porro nihil, quaerat aut veritatis dignissimos harum
+            reprehenderit, corrupti blanditiis quidem incidunt beatae minima
+            dolores exercitationem minus repellat earum quasi?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="firstsec">
+          <h3>Lorem Ipsum dolor</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            consequatur, porro nihil, quaerat aut veritatis dignissimos harum
+            reprehenderit, corrupti blanditiis quidem incidunt beatae minima
+            dolores exercitationem minus repellat earum quasi?
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="colorCard2">
+          <img
+            class=""
+            src="assets\Frame 1171275381.png"
+            alt="card"
+            title="card"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <figure class="colorCard3">
+          <img src="assets\Frame 1171275381.png" alt="card" title="card" />
+          <figcaption>
+            <h6>Lorem ipsum dolor</h6>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <figure class="colorCard3">
+          <img src="assets\Frame 1171275381.png" alt="card" title="card" />
+
+          <figcaption>
+            <h6>Lorem ipsum dolor</h6>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <figure class="colorCard3">
+          <img src="assets\Frame 1171275381.png" alt="card" title="card" />
+
+          <figcaption>
+            <h6>Lorem ipsum dolor</h6>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <figure class="colorCard3">
+          <img src="assets\Frame 1171275381.png" alt="card" title="card" />
+
+          <figcaption>
+            <h6>Lorem ipsum dolor</h6>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</div>
