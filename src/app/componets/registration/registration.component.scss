@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+input {
+  width: 100%;
+}
+mat-form-field {
+  width: 100%;
+}
+.loginCard {
+  position: relative;
+  top: 30%;
+}
+.loginNav {
+  font-size: 27px;
+  text-align: center;
+  color: white;
+  background-color: #008b8b;
+  border-radius: 5px;
+}
+.loginbtn {
+  color: white;
+  background-color: #008b8b;
+  margin-bottom: 10px;
+}
+.mat-card {
+  padding: 30px;
+}

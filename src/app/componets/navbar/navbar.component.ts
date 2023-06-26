@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {}
-  onLogOut() {}
-  onUser() {
-    var element = document.getElementById('userToggleId');
-    element!.classList.toggle('dropdown-item');
+  onLogOut() {
+    this._router.navigate(['/login']);
   }
+  onUser(eve: Event) {}
 }

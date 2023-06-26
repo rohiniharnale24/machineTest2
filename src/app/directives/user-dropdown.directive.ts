@@ -1,23 +1,16 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Directive, HostListener, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appUserDropdown]',
+  selector: '[appDropdown]',
 })
-export class UserDropdownDirective implements OnInit {
-  constructor(private _eleRef: ElementRef, private _render: Renderer2) {}
-  ngOnInit(): void {
-    this._render.addClass(this._eleRef.nativeElement, 'dropdown-item');
+export class DropdownDirective implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
+
+  @HostListener('click', ['$event'])
+  onClick(eve: Event) {
+    let ele = eve.target as HTMLElement;
+    console.log(ele.closest('li')?.nextElementSibling?.children[1]);
+    ele.closest('li')?.nextElementSibling?.children[1].classList.remove('show');
   }
 }
-// import { Directive, HostBinding, HostListener } from '@angular/core';
-
-// @Directive({
-//   selector: '[appUserDropdown]',
-// })
-// export class UserDropdownDirective {
-//   @HostBinding('class.open') isOpen = false;
-
-//   @HostListener('click') toggleopen() {
-//     this.isOpen = !this.isOpen;
-//   }
-// }
