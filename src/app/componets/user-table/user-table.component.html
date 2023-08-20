@@ -2,6 +2,18 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-sm-12">
+      <div class="tableTopSection">
+        <div><h4>Table</h4></div>
+        <div>
+          <input
+            class="form-control mr-sm-2 search float-left"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+      </div>
+
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->

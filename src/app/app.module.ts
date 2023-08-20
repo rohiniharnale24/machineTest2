@@ -10,6 +10,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NgChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './componets/user/user.component';
 import { ChartComponent } from './componets/chart/chart.component';
 import { DashboardComponent } from './componets/dashboard/dashboard.component';
-import { DropdownDirective } from './directives/user-dropdown.directive';
 import { UserTableComponent } from './componets/user-table/user-table.component';
 import { CreateUserComponent } from './componets/create-user/create-user.component';
 import { LoanComponent } from './componets/loan/loan.component';
@@ -28,6 +28,7 @@ import { ToggleTableFromDirectiveDirective } from './directives/toggle-table-fro
 import { RegistrationComponent } from './componets/registration/registration.component';
 import { LoginComponent } from './componets/login/login.component';
 import { NavbarComponent } from './componets/navbar/navbar.component';
+// import { SelfToogledirectiveDirective } from './self-toogledirective.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
     UserComponent,
     ChartComponent,
     DashboardComponent,
-    DropdownDirective,
+
     UserTableComponent,
     CreateUserComponent,
     LoanComponent,
@@ -67,6 +68,7 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
     MatNativeDateModule,
     MatInputModule,
     FormsModule,
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

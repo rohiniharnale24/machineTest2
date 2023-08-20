@@ -14,7 +14,6 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {}
   onUserReg(f: NgForm) {
     console.log(f.value);
-
     this._regService.onUserReg(f.value);
     f.reset();
   }

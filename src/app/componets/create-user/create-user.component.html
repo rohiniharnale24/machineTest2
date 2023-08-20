@@ -20,16 +20,22 @@
                     matInput
                     placeholder="firstname"
                     formcontrolname="firstName"
+                    required
                   />
-                  <ng-container
-                    *ngIf="
-                      userFormControls['firstName'].invalid &&
-                      userFormControls['firstName'].touched
-                    "
-                  >
-                    <p class="alert alert-danger">firstName is Required</p>
-                  </ng-container>
                 </mat-form-field>
+                <!-- <ng-container
+                  *ngIf="
+                    userFormControls['firstName'].invalid &&
+                    userFormControls['firstName'].touched
+                  "
+                >
+                  <p
+                    *ngIf="userFormControls['firstName'].hasError('required')"
+                    class="alert alert-danger"
+                  >
+                    firstName is Required
+                  </p>
+                </ng-container> -->
               </mat-card-content>
             </div>
           </div>
@@ -42,15 +48,16 @@
                     matInput
                     placeholder="lastName"
                     formcontrolname="lastName"
+                    required
                   />
-                  <ng-container
+                  <!-- <ng-container
                     *ngIf="
                       userFormControls['lastName'].invalid &&
                       userFormControls['lastName'].touched
                     "
                   >
                     <p class="alert alert-danger">lastName is Required</p>
-                  </ng-container>
+                  </ng-container> -->
                 </mat-form-field>
               </mat-card-content>
             </div>

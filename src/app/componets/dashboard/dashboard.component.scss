@@ -1,4 +1,5 @@
 //////////////////////////////////////////card-section///////////////////////////////
+
 .main-heading {
   width: 171px;
   height: 40px;
@@ -80,7 +81,7 @@
 }
 .laonImg {
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 
   object-fit: cover;
 }
@@ -91,19 +92,11 @@
   background-color: #aaa3ff;
   border-radius: 25px;
 }
-.loan-section {
-  margin-top: 40px;
-}
+
 .figSection {
   color: #ffffff;
 }
-.loanImg2 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  text-align: center;
-}
+
 .vector-invoice {
   top: 50%;
   left: 50%;
@@ -121,9 +114,24 @@
   border-radius: 15px;
   overflow: hidden;
 }
-.laon-row {
+.br-2 {
   border-right: 2px solid #fff;
 }
+.figSection div {
+  font-size: 20px;
+}
+.btnApply {
+  background-color: white;
+  padding: 5px 15px 5px 15px;
+  border: white;
+  border-radius: 5px;
+}
+// .vecImg {
+//   background-image: url("assets\receipt-minus.png");
+//   object-fit: cover;
+//   background-repeat: no-repeat;
+// }
+
 // ////////////////////////////////////////////////////////3rd section/////////////////////////////////
 .third-Section {
   margin-top: 40px;
@@ -169,4 +177,24 @@
   left: 15%;
   color: #ffffff;
   font-size: small;
+}
+
+@media screen and (max-width: 600px) {
+  .loanImg2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .loanImg2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .loanImg2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+  }
 }

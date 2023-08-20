@@ -13,5 +13,4 @@ export class NavbarComponent implements OnInit {
   onLogOut() {
     this._router.navigate(['/login']);
   }
-  onUser(eve: Event) {}
 }

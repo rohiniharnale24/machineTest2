@@ -15,10 +15,9 @@ export class LoginComponent implements OnInit {
     // onUserLogin( userInfo : HTMLInputElement){
     // }
   }
-  @ViewChild('f') loginForm!: NgForm;
+  // @ViewChild('f') loginForm!: NgForm;
   onLogin(f: NgForm) {
     console.log(f.value);
     this._loginService.onloginUser(f.value);
-    this._router.navigate(['dashboard']);
   }
 }

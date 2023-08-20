@@ -13,24 +13,27 @@ export class CreateUserComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.userForm);
-
     this.createUserForm();
+    console.log(this.userForm.controls);
+    setTimeout(() => {
+      console.log(this.userForm.controls['firstName'].value);
+    }, 100000);
   }
   createUserForm() {
     this.userForm = new FormGroup({
-      firstName: new FormControl([null]),
-      lastName: new FormControl([null, Validators.required]),
-      gender: new FormControl([null]),
-      EnterDate: new FormControl([null]),
-      email: new FormControl([null], Validators.required),
-      phoneNumber: new FormControl([null]),
-      password: new FormControl([null]),
-      confirmPassword: new FormControl([null]),
+      firstName: new FormControl(null, [Validators.required]),
+      lastName: new FormControl(null, [Validators.required]),
+      gender: new FormControl(null),
+      EnterDate: new FormControl(null, [Validators.required]),
+      email: new FormControl(null, [Validators.required]),
+      phoneNumber: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required]),
+      confirmPassword: new FormControl(null, [Validators.required]),
     });
   }
-  get userFormControls() {
-    return this.userForm.controls;
+  userFormControls() {
+    // return this.userForm.controls;
+    // console.log(this.userForm.controls);
   }
   onUserCreate() {
     console.log(this.userForm);
