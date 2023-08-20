@@ -1,0 +1,79 @@
+<!-- <p>registration works!</p> -->
+<!-- <p>login works!</p> -->
+<div class="container">
+  <form (ngSubmit)="onUserReg(f)" #f="ngForm">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <mat-card class="loginCard">
+          <mat-card-content>
+            <nav class="loginNav mb-4">
+              <span>Sign Up Page</span>
+            </nav>
+            <div class="userName">
+              <mat-form-field appearance="fill" class="mb-4">
+                <mat-label>UserName</mat-label>
+                <input
+                  matInput
+                  placeholder="username"
+                  ngModel
+                  name="username"
+                  #username="ngModel"
+                  required
+                />
+              </mat-form-field>
+              <ng-container *ngIf="username.touched && username.invalid">
+                <p class="userValidation">Password Is Mandatory</p>
+              </ng-container>
+            </div>
+            <div class="form-group">
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  placeholder="password"
+                  ngModel
+                  name="password"
+                  #password="ngModel"
+                  required
+                />
+              </mat-form-field>
+              <ng-container *ngIf="password.touched && password.invalid">
+                <p class="userValidation">Password Is Mandatory</p>
+              </ng-container>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label> Confirm Password</mat-label>
+                <input
+                  matInput
+                  placeholder="Confirm password"
+                  ngModel
+                  name="confirmPassword"
+                  #confirmPassword="ngModel"
+                  required
+                />
+              </mat-form-field>
+              <ng-container
+                *ngIf="confirmPassword.touched && confirmPassword.invalid"
+              >
+                <p class="userValidation">confirmPassword Is Mandatory</p>
+              </ng-container>
+            </div>
+            <div>
+              <a href="javascript:;" routerLink="/login"
+                >Already have an Account</a
+              >
+              <button
+                class="float-right loginbtn"
+                mat-stroked-button
+                color="primary"
+              >
+                Sign UP
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>

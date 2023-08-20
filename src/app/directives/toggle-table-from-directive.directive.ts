@@ -1,25 +1,10 @@
-// import { Directive, HostListener, OnInit } from '@angular/core';
-
-// @Directive({
-//   selector: '[appDropdown]',
-// })
-// export class DropdownDirective implements OnInit {
-//   constructor() {}
-//   ngOnInit(): void {}
-
-//   @HostListener('click', ['$event'])
-//   onClick(eve: Event) {
-//     let ele = eve.target as HTMLElement;
-//     console.log(ele.closest('li')?.nextElementSibling?.children[1]);
-//     ele.closest('li')?.nextElementSibling?.children[1].classList.remove('show');
-//   }
-// }
+//
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appToggletableandform]',
+  selector: '[appToggleTableFromDirective]',
 })
-export class ToggletableandformDirective {
+export class ToggleTableFromDirectiveDirective {
   @Input() property!: string;
   istrue: boolean = false;
   constructor(private eleRef: ElementRef) {}

@@ -1,0 +1,219 @@
+<div class="container">
+  <h2 class="mt-4 mb-4 ml-4">Create User</h2>
+
+  <form [formGroup]="userForm">
+    <mat-card class="p-5 m-4">
+      <section class="mainSection">
+        <div class="personalDetail">
+          <span class="headline">Personal Details</span>
+          <span class="float-right mt-2">Marked Feilds Are Nessessary *</span>
+          <div class="lineDiv"></div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-sm-4 mt-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4">FirstName</mat-label>
+                  <input
+                    matInput
+                    placeholder="firstname"
+                    formcontrolname="firstName"
+                    required
+                  />
+                </mat-form-field>
+                <!-- <ng-container
+                  *ngIf="
+                    userFormControls['firstName'].invalid &&
+                    userFormControls['firstName'].touched
+                  "
+                >
+                  <p
+                    *ngIf="userFormControls['firstName'].hasError('required')"
+                    class="alert alert-danger"
+                  >
+                    firstName is Required
+                  </p>
+                </ng-container> -->
+              </mat-card-content>
+            </div>
+          </div>
+          <div class="col-sm-4 mt-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4">LastName</mat-label>
+                  <input
+                    matInput
+                    placeholder="lastName"
+                    formcontrolname="lastName"
+                    required
+                  />
+                  <!-- <ng-container
+                    *ngIf="
+                      userFormControls['lastName'].invalid &&
+                      userFormControls['lastName'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">lastName is Required</p>
+                  </ng-container> -->
+                </mat-form-field>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-form-field appearance="fill">
+                <mat-label placeholder="gender">Gender</mat-label>
+                <mat-select>
+                  <mat-option value="one">Male</mat-option>
+                  <mat-option value="two">Female</mat-option>
+                  <mat-option value="two">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a BirthDate</mat-label>
+                <span>
+                  <input
+                    matInput
+                    formControlName="EnterDate"
+                    [matDatepicker]="picker"
+                /></span>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle
+                  class="datePicker"
+                  matIconSuffi
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <!-- <ng-container
+                    *ngIf="
+                      userFormControls['EnterDate'].invalid &&
+                      userFormControls['EnterDate'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">EnterDate is Required</p>
+                  </ng-container> -->
+            </div>
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4">email</mat-label>
+                  <input matInput placeholder="email" formcontrolname="email" />
+                  <!-- <ng-container
+                    *ngIf="
+                      userFormControls['email'].invalid &&
+                      userFormControls['email'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">email is Required</p>
+                  </ng-container> -->
+                </mat-form-field>
+              </mat-card-content>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4"> phoneNumber</mat-label>
+                  <input
+                    matInput
+                    placeholder=" phoneNumber"
+                    formcontrolname=" phoneNumber"
+                  />
+                  <!-- <ng-container
+                    *ngIf="
+                      userFormControls['phoneNumber'].invalid &&
+                      userFormControls['phoneNumber'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">phoneNumber is Required</p>
+                  </ng-container> -->
+                </mat-form-field>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+      <section class="subSection">
+        <h4>Create Password</h4>
+        <div class="lineDiv"></div>
+
+        <div class="row my-4">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4">password</mat-label>
+                  <input
+                    matInput
+                    placeholder="password"
+                    formcontrolname="password"
+                  />
+                  <!-- <ng-container
+                    *ngIf="
+                      userFormControls['password'].invalid &&
+                      userFormControls['password'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">password is Required</p>
+                  </ng-container> -->
+                </mat-form-field>
+              </mat-card-content>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <mat-card-content>
+                <mat-form-field appearance="fill">
+                  <mat-label class="mt-4">confirm Password</mat-label>
+                  <input
+                    matInput
+                    placeholder="confirmPassword"
+                    formcontrolname="confirmPassword"
+                  />
+                  <!-- <ng-container
+                    *ngIf="
+                      userFormControls['confirmPassword'].invalid &&
+                      userFormControls['confirmPassword'].touched
+                    "
+                  >
+                    <p class="alert alert-danger">
+                      confirmPassword is Required
+                    </p>
+                  </ng-container> -->
+                </mat-form-field>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="buttonSection">
+        <div class="createbtn">
+          <button
+            mat-stroked-button
+            class="createUserBtn"
+            (click)="onUserCreate()"
+          >
+            Create User
+          </button>
+        </div>
+      </section>
+    </mat-card>
+  </form>
+</div>
+<!-- <p>{{ userForm.value | json }}</p> -->
